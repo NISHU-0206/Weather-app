@@ -4,46 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #74ebd5, #ACB6E5);
-      text-align: center;
-      padding: 50px;
-    }
+  
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .weather-container {
+    background: #ffffffee;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  input {
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .weather-result {
+    margin-top: 20px;
+  }
+
+  .weather-result img {
+    width: 80px;
+  }
+  
+  @media (max-width: 500px) {
     .weather-container {
-      background: #ffffffcc;
-      border-radius: 15px;
-      padding: 30px;
-      width: 300px;
-      margin: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
     }
-    input {
-      padding: 10px;
-      width: 70%;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
+
+    input,
     button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      font-size: 0.95rem;
     }
-    button:hover {
-      background-color: #0056b3;
-    }
-    .weather-result {
-      margin-top: 20px;
-    }
+
     .weather-result img {
-      width: 80px;
+      width: 60px;
     }
-  </style>
+  }
+</style>
+
 </head>
 <body>
 
